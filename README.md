@@ -1,8 +1,8 @@
-# 🚦 Qwen2.5-VL Fine-Tuning Framework for Pedestrian Crossing Severity
+# 🚦 Qwen2.5-VL Fine-Tuning Framework for Pedestrian Crossing Severity (IIT-KGP)
 
 A production-ready, highly optimized Python framework for fine-tuning **Qwen2.5-VL (3B and 7B)** Vision-Language Models. This repository is specifically made for multimodal severity prediction of pedestrian crossings, utilizing LoRA/QLoRA for consumer-hardware compatibility (e.g., RTX 4070 12GB on Windows).
 
-BuILT with Hugging Face `transformers`, `peft`, `accelerate`, and `bitsandbytes`. and BuILT For IIT-KGP
+BuILT with Hugging Face `transformers`, `peft`, `accelerate`, and `bitsandbytes`.
 
 ---
 
