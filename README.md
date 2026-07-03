@@ -1,8 +1,8 @@
 # 🚦 Qwen2.5-VL Fine-Tuning Framework for Pedestrian Crossing Severity
 
-A production-ready, highly optimized Python framework for fine-tuning **Qwen2.5-VL (3B and 7B)** Vision-Language Models. This repository is specifically tailored for multimodal severity prediction of pedestrian crossings, utilizing LoRA/QLoRA for consumer-hardware compatibility (e.g., RTX 4070 12GB on Windows).
+A production-ready, highly optimized Python framework for fine-tuning **Qwen2.5-VL (3B and 7B)** Vision-Language Models. This repository is specifically made for multimodal severity prediction of pedestrian crossings, utilizing LoRA/QLoRA for consumer-hardware compatibility (e.g., RTX 4070 12GB on Windows).
 
-Built with Hugging Face `transformers`, `peft`, `accelerate`, and `bitsandbytes`.
+BuILT with Hugging Face `transformers`, `peft`, `accelerate`, and `bitsandbytes`. and BuILT For IIT-KGP
 
 ---
 
@@ -72,7 +72,7 @@ Ensure you are running **Python 3.10 or 3.11** on Windows/Linux with CUDA 12.x i
 
 ---
 
-## 🚀 Usage Tutorial
+##  Tutorial
 
 ### Step 1: Verify Configuration (`config.py`)
 Open `config.py` to verify or adjust hyperparameters. The defaults are strictly tuned to prevent Out-Of-Memory (OOM) errors on a 12GB GPU:
@@ -100,7 +100,7 @@ Open a new terminal and launch TensorBoard to monitor loss and metrics in real-t
 tensorboard --logdir runs/
 ```
 
-### Step 4: Run Inference
+### Step 4: Run Inference (Do not use inference script as they are still in production state thanks:)
 Once training is complete (or using an intermediate checkpoint), you can test the model on a specific pedestrian clip using the CLI tool:
 
 ```bash
@@ -114,7 +114,7 @@ python predict.py \
 
 ---
 
-## 🧠 Under the Hood
+##  Under the Hood
 
 - **Dataset Handling (`dataset.py`)**: Uses a lazy-loading strategy. Only the textual ChatML is held in RAM. Videos and images are resolved and processed via the `qwen_vl_utils.process_vision_info` pipeline precisely at fetch time.
 - **Collator (`collator.py`)**: Dynamically pads textual tokens and constructs the 3D visual tensors. Ensures `-100` is applied to pad tokens so they are ignored during loss calculation.
